@@ -23,15 +23,15 @@ import os
 ENDPOINT_URL = os.getenv("AWS_ENDPOINT_URL", "sua_info")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID", "test")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY", "test")
-AWS_REGION = os.getenv("AWS_REGION", "sua_info")
+AWS_REGION = os.getenv("AWS_REGION", "sua_info") #Use sa-esat-1 host br
 
-S3_BUCKET_INPUT = os.getenv("S3_BUCKET_INPUT", "sua_info")
-S3_BUCKET_PROCESSED = os.getenv("S3_BUCKET_PROCESSED", "sua_info")
+S3_BUCKET_INPUT = os.getenv("S3_BUCKET_INPUT", "image-input") 
+S3_BUCKET_PROCESSED = os.getenv("S3_BUCKET_PROCESSED", "image-processed") 
 
-SQS_QUEUE_INPUT = os.getenv("SQS_QUEUE_INPUT", "sua_info")
-SQS_QUEUE_PROCESSED = os.getenv("SQS_QUEUE_PROCESSED", "sua_info")
+SQS_QUEUE_INPUT = os.getenv("SQS_QUEUE_INPUT", "new-image-input.fifo") #Fila do tipo fifo
+SQS_QUEUE_PROCESSED = os.getenv("SQS_QUEUE_PROCESSED", "new-image-processed.fifo") #Fila do tipo fifo
 
-SQS_MESSAGE_GROUP_ID = os.getenv("SQS_MESSAGE_GROUP_ID", "sua_info")
+SQS_MESSAGE_GROUP_ID = os.getenv("SQS_MESSAGE_GROUP_ID", "image-group") 
 ```
 
 ## Etapa 3: Iniciar o container
