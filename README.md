@@ -38,7 +38,8 @@ SQS_MESSAGE_GROUP_ID = os.getenv("SQS_MESSAGE_GROUP_ID", "sua_info")
 Agora que temos o ambiente configurado, com docker instalado e com as configurações de env feitas, vamos partir para a iniciaização do container através dos comandos abaixo:
 
 ```bash
-docker-compose up -d #Build do container
+cd /diretorio_do_repositorio
+docker-compose build #Build do container
 ```
 Verifique se os container estão em execução devidamente:
 ```bash
