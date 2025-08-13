@@ -41,6 +41,9 @@ Agora que temos o ambiente configurado, com docker instalado e com as configura�
 cd /diretorio_do_repositorio
 docker-compose build #Build do container
 ```
+```bash
+docker-compose up -d
+```
 Verifique se os container estão em execução devidamente:
 ```bash
 docker ps
