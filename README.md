@@ -23,7 +23,7 @@ import os
 ENDPOINT_URL = os.getenv("AWS_ENDPOINT_URL", "sua_info")
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID", "test")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY", "test")
-AWS_REGION = os.getenv("AWS_REGION", "sua_info") #Use sa-esat-1 host br
+AWS_REGION = os.getenv("AWS_REGION", "sua_info") #Use sa-east-1 host br
 
 S3_BUCKET_INPUT = os.getenv("S3_BUCKET_INPUT", "image-input") 
 S3_BUCKET_PROCESSED = os.getenv("S3_BUCKET_PROCESSED", "image-processed") 
