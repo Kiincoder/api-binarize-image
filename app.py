@@ -21,7 +21,7 @@ api = Api(
     doc="/docs"
 )
 
-ns = Namespace("files", description="Operações com arquivos")
+ns = Namespace("api", description="Operações com arquivos")
 api.add_namespace(ns)
 
 upload_response = ns.model("UploadResponse", {
@@ -46,8 +46,6 @@ class UploadFile(Resource):
   )
   @ns.expect(ns.parser().add_argument("file", location="files", type="file", required=True))
   def post(self):
-    file = ns.payload or api.payload  
-
     if "file" not in request.files:
       return {"error": "Nenhum arquivo enviado"}, 400
 
