@@ -36,20 +36,32 @@ SQS_MESSAGE_GROUP_ID = os.getenv("SQS_MESSAGE_GROUP_ID", "image-group")
 
 ## Etapa 3: Iniciar o container
 Agora que temos o ambiente configurado, com docker instalado e com as configurações de env feitas, vamos partir para a iniciaização do container através dos comandos abaixo:
-
+Garanta que você esta no diretorio:
 ```bash
 cd /diretorio_do_repositorio
+```
+Execute os comandos abaixo:
+
+Se for linux execute este comando primeiro, se não apenas ignore e prossiga o fluxo.
+```bash
+chmod +x localstack-init/init-aws.sh
+```
+---
+```bash
 docker-compose build #Build do container
 ```
+
 ```bash
-docker-compose up -d
+docker-compose up #Executa os containers
+
+docker-compose up -d #Caso queira deixar em segundo plano
 ```
+
 Verifique se os container estão em execução devidamente:
 ```bash
 docker ps
 ```
-
-Caso queira parar o container:
+Caso queira parar os containers:
 ```bash
 docker-compose down
 ```
