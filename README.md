@@ -1,3 +1,16 @@
+# Resumo
+
+Esta é uma api simpes, desenvolvida para fins educativos utilizando as seguintes tecnologias:
+  * Flask
+  * AWS
+  * Boto3
+  * Bucket (S3)
+  * Queue (SQS)
+  * Docker
+
+Como não há intuito de escalabilidade ou financeiro nessa api os serviços da AWS foram consumido através da imagem do **[Localstack](https://www.localstack.cloud/)**, assim facilitando o contexto geral da aplicação.
+
+
 ## Etapa 1: Instalar Docker
 Primeiramente devemos ter o docker instalado na nossa máquina, a seguir o link da documentação do docker: **[DockerDocs](https://docs.docker.com/)**
 
@@ -36,5 +49,13 @@ Caso queira parar o container:
 ```bash
 docker-compose down
 ```
+
+# Dicas
+
+Esta API possui documentação própria, logo quando você inicializar pode acessar a rota ```http://localhost:5000/docs```, nela você irá encontrar as rotas para o uso da api, além disso o **worker** possui uma rota de checagem de saúde, através de ```http://localhost:5001/healthcheck```.
+
+Para usuários windowns recomendo fortemente a utilização do **Docker Desktop**, pois facilita toda integração e controle dos containers.
+
+
 
 
