@@ -47,14 +47,11 @@ Se for linux execute este comando primeiro, se não apenas ignore e prossiga o f
 chmod +x localstack-init/init-aws.sh
 ```
 ---
-```bash
-docker-compose build #Build do container
-```
 
 ```bash
-docker-compose up #Executa os containers
+docker compose up --build #Builda e executa os containers
 
-docker-compose up -d #Caso queira deixar em segundo plano
+docker compose up --build -d #Caso queira deixar em segundo plano
 ```
 
 Verifique se os container estão em execução devidamente:
